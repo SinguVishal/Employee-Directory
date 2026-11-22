@@ -9,12 +9,12 @@ function EmployeeFilters({
   onRoleChange,
 }) {
   return (
-    <>
-      <label>
+    <div className="employee-filters">
+      <label className="filter-control">
         Search by name
         <input type="search" value={search} onChange={onSearchChange} />
       </label>
-      <label>
+      <label className="filter-control">
         Filter by department
         <select value={departmentFilter} onChange={onDepartmentChange}>
           <option value="">All departments</option>
@@ -25,7 +25,7 @@ function EmployeeFilters({
           ))}
         </select>
       </label>
-      <label>
+      <label className="filter-control">
         Filter by role
         <select value={roleFilter} onChange={onRoleChange}>
           <option value="">All roles</option>
@@ -36,7 +36,7 @@ function EmployeeFilters({
           ))}
         </select>
       </label>
-    </>
+    </div>
   );
 }
 

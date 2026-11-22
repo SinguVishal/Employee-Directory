@@ -113,9 +113,19 @@ function App() {
   }
 
   return (
-    <main>
-      <h1>Employee Directory</h1>
-      <p>Manage and browse a directory of employees.</p>
+    <main className="app-shell">
+      <header className="page-header">
+        <div>
+          <p className="page-eyebrow">People management</p>
+          <h1>Employee Directory</h1>
+          <p className="page-description">
+            Manage and browse your team in one place.
+          </p>
+        </div>
+        <span className="employee-count">
+          {employees.length} {employees.length === 1 ? "employee" : "employees"}
+        </span>
+      </header>
 
       <EmployeeForm
         form={form}
@@ -125,7 +135,7 @@ function App() {
         onCancel={resetForm}
       />
 
-      <section aria-labelledby="employee-list-heading">
+      <section className="employee-directory" aria-labelledby="employee-list-heading">
         <h2 id="employee-list-heading">Employees</h2>
         <EmployeeFilters
           search={search}

@@ -7,7 +7,15 @@ function EmployeePhoto({ src, alt }) {
     return <p role="status">Photo couldn't be loaded.</p>;
   }
 
-  return <img src={src} alt={alt} width="80" onError={() => setHasError(true)} />;
+  return (
+    <img
+      className="employee-photo"
+      src={src}
+      alt={alt}
+      width="80"
+      onError={() => setHasError(true)}
+    />
+  );
 }
 
 export default EmployeePhoto;

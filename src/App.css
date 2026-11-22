@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  background: #f4f6f9;
+  color: #252b36;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #4169e1;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3154bd;
+}
+
+.app-shell {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.page-eyebrow {
+  color: #4169e1;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-description {
+  color: #667085;
+}
+
+.employee-count {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #e7ecff;
+  color: #3154bd;
+}
+
+.employee-form-card,
+.employee-directory {
+  margin-bottom: 24px;
+  padding: 24px;
+  border: 1px solid #e0e4eb;
+  border-radius: 10px;
+  background: white;
+}
+
+.employee-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.employee-field label,
+.filter-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.employee-field input,
+.filter-control input,
+.filter-control select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd1dc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.employee-photo-preview,
+.employee-form-actions,
+.employee-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-form-actions {
+  grid-column: 1 / -1;
+}
+
+.employee-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.employee-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.employee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.employee-card {
+  padding: 18px;
+  border: 1px solid #e0e4eb;
+  border-radius: 8px;
+}
+
+.employee-card p {
+  color: #667085;
+  overflow-wrap: anywhere;
+}
+
+.employee-card-actions {
+  padding-top: 12px;
+  border-top: 1px solid #e0e4eb;
+}
+
+.button-secondary {
+  background: #667085;
+}
+
+.button-secondary:hover {
+  background: #505968;
+}
+
+.button-danger {
+  background: #c0392b;
+}
+
+.button-danger:hover {
+  background: #962d22;
+}
+
+.empty-state {
+  padding: 20px;
+  color: #667085;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .employee-form-grid,
+  .employee-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-form-actions {
+    grid-column: auto;
+  }
+}
